@@ -1,9 +1,9 @@
 <h1>People</h1>
 <p><%= link_to "New person", new_person_path %></p>
 <% @people.each do |person| %>
-  <h2><%= person.name %></h2>
+  <h2><%= person.first_name %></h2>
   <%= link_to "Show Person", person_path(person) %>
   <%= link_to "Edit person", edit_person_path(person) %>
-  <%- link_to "Destroy person", person, method: :delete %>
+  <%= link_to "Destroy person", person, method: :delete %>
 <% end %>
 
